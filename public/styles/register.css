@@ -1,0 +1,125 @@
+body{    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+.container {
+    width: 500px;
+    height: auto;
+    margin-top: 50px;
+    background-color: #063970;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+.container h2 {
+    text-align: center;
+    padding-top: 20px;
+    font-style: italic;
+    color: white;
+}
+
+
+
+.container form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+
+
+
+.container form .box {
+    width: 80%;
+    margin-top: 20px;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.container form .box .icon {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #333;
+    color: white;
+}
+
+
+
+.container form .box input {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    font-style: italic;
+}
+
+
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 7px;
+    margin-left: -70px;
+    margin-bottom: -10px;
+    font-style: italic;
+    background-color: #063970;
+    
+
+}
+
+
+.container form button {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    margin-top: 50px;
+    transition: 0.1s ease;
+}
+
+
+.container form button:hover {
+    background-color: darkgreen;
+    font-style: italic;
+}
+
+
+
+.login-link {
+    text-align: center;
+    margin-top: 4px;
+    font-size: 18px;
+    font-style: italic;
+}
+
+
+.login-route {
+    color: #3b98fb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-route:hover {
+    text-decoration: underline;
+    font-size: 19px;
+}

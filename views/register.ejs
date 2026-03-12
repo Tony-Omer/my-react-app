@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/styles/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<body>
+
+
+    <div class="container">
+
+      <h2>Register</h2>
+
+      <form action="/register" method="post">
+
+        <div class="box">
+
+          <i class="fa-solid fa-user icon"></i>
+          <input type="text" id="username" name="username" required placeholder="User Name">
+
+        </div>
+
+        <% if (userError) { %>
+            <p class="error"> <%= userError %> </p>
+          <% } %>
+
+
+        <div class="box">
+
+          <i class="fa-solid fa-envelope icon"></i>
+          <input type="email" id="email" name="email" required placeholder="Email">
+
+        </div>
+
+        <% if (emailError) { %>
+            <p class="error"> <%= emailError %> </p>
+          <% } %>
+
+
+        <div class="box">
+
+          <i class="fa-solid fa-lock icon"></i>
+          <input type="password" id="password" name="password" required placeholder="Password">
+
+        </div>
+
+
+        <% if (passError) { %>
+            <p class="error"> <%= passError %> </p>
+          <% } %>
+
+
+
+
+        <button type="submit">Register</button>
+
+        
+      </form>
+
+
+
+
+    </div>
+    
+
+<p class="login-link">Already have an account? <a href="/login" class="login-route">Log in here</a>.</p>
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+</body>
+</html>

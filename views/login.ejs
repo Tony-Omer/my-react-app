@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Modather Omer">
+    <meta name="description" content="Login page for the application">
+    <title>Log In</title>
+    <link rel="stylesheet" href="./Styles/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+
+    <div class="login-container">
+
+        <div class="circle"></div>
+
+    <div class="info">
+        <h1>Welcome to our website!</h1>
+        <p>Please log in to access your account and enjoy our services.</p>
+    </div>
+
+
+    <div class="login-form">
+
+        <h2>Login</h2>
+
+        <form action="/login" method="post">
+
+            <div class="user box">
+
+                <i class="fa-solid fa-envelope icon"></i>
+                <input type="email" id="email" name="email" required placeholder="Email Address">
+
+            </div>
+
+            <% if (mailError) { %>
+                <p class="mailError error"> <%= mailError %> </p>
+            <% } %>
+
+
+            <div class="password box">
+                <i class="fa-solid fa-lock icon"></i>
+                <input type="password" id="password" name="password" required placeholder="Password">
+            </div>
+
+            <% if (passwordError) { %>
+                <p class="passwordError error"> <%= passwordError %> </p>
+            <% } %>
+
+            <button type="submit">Log In</button>
+        </form>
+
+
+
+     <button class="google-btn">
+          <img src="https://developers.google.com/identity/images/g-logo.png" 
+         alt="Google logo" class="google-icon">
+          <span>Sign in with Google</span>
+     </button> 
+
+     <p class="register-link">Don't have an account? <a href="/register" class="register-route">Register here</a>.</p>
+
+        
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+    
+
+
+
+
+
+
+
+
+</body>
+</html>
