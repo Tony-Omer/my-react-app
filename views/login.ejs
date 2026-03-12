@@ -34,9 +34,6 @@
 
             </div>
 
-            <% if (mailError) { %>
-                <p class="mailError error"> <%= mailError %> </p>
-            <% } %>
 
 
             <div class="password box">
@@ -44,9 +41,12 @@
                 <input type="password" id="password" name="password" required placeholder="Password">
             </div>
 
-            <% if (passwordError) { %>
-                <p class="passwordError error"> <%= passwordError %> </p>
+
+            <% if (error.length > 0) { %>
+                  <p class="error"><%= error[0] %></p>
             <% } %>
+
+            
 
             <button type="submit">Log In</button>
         </form>

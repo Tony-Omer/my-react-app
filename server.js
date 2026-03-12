@@ -47,17 +47,18 @@ app.set("view engine", "ejs");
 // Middleware to set error messages for login
 app.use((req, res, next) => {
 
-    // login errors
-    res.locals.mailError = req.flash("mailError");
-    res.locals.passwordError = req.flash("passwordError");
+  // login errors
+  res.locals.error = req.flash("error");
 
-    // registration errors
-    res.locals.userError = req.flash("userError");
-    res.locals.emailError = req.flash("emailError");
-    res.locals.passError = req.flash("passError");
+  // registration errors
+  res.locals.userError = req.flash("userError");
+  res.locals.emailError = req.flash("emailError");
+  res.locals.passError = req.flash("passError");
 
-    next();
+  // success messages
+  res.locals.success = req.flash("success");
 
+  next();
 });
 
 
@@ -99,8 +100,9 @@ passport.use(
         (err, result) => {
           if (err) return done(err);
 
+          // Check if user exists
           if (result.rows.length === 0) {
-            return done(null, false, { message: "Incorrect email." });
+            return done(null, false, { message: "Invalid email or password." });
           }
 
           const user = result.rows[0];
@@ -109,7 +111,7 @@ passport.use(
             if (err) return done(err);
 
             if (!isMatch) {
-              return done(null, false, { message: "Incorrect password." });
+              return done(null, false, { message: "Invalid email or password." });
             }
 
             return done(null, user);
@@ -236,6 +238,8 @@ passport.deserializeUser((id, done) => {
       req.flash("userError", "Username already exists");
       return res.redirect("/register");
     }
+
+
 
 
     // Check if email already exists
