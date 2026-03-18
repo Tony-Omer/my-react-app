@@ -1,5 +1,6 @@
 body{
     font-family: Arial, sans-serif;
+    
 }
 
 
@@ -174,4 +175,26 @@ body{
     .top-nav nav ul li a {
         font-size: 14px;
     }
+}
+
+
+ 
+
+/* Smartphones Section */
+.smartphones {
+    width: 1000px;
+    height: 500px;
+    background-color: #006fe5;
+    border-radius: 5px;
+    background-color: rgb(0 111 229 / 70%);
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.smartphones .mobile{
+
 }
