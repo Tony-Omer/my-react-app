@@ -187,9 +187,10 @@ background-color: #107cf1;
 .error {
     color: red;
     font-size: 14px;
-    margin-top: -23px;
+    margin-top: -10px;
     margin-bottom: 15px;
-    margin-left: 55px;
+    
+    text-align: center;
 
 }
 
