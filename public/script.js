@@ -27,6 +27,20 @@ hamburger.addEventListener("click", () => {
 });
 
 
+function checkScreenSize() {
+    if (window.innerWidth > 768) {
+        navMenu.style.display = "flex";
+        hamburger.style.display = "none";
+        x.style.display = "none";
+    }
+}
+window.addEventListener("resize", checkScreenSize);
+
+
+
+
+
+
 
 x.addEventListener("click", () => {
     navMenu.style.display = "none";
