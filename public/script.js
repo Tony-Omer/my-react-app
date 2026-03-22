@@ -9,3 +9,34 @@ smartphoneLink.addEventListener("mouseleave", () => {
     smartphones.style.opacity = "0";
 });
 
+
+
+
+// Hamburger menu
+
+const hamburger = document.querySelector(".bars");
+const navMenu = document.querySelector(".top-nav");
+const x = document.querySelector(".top-nav .x");
+
+
+hamburger.addEventListener("click", () => {
+    navMenu.style.display = "flex";
+    hamburger.style.display = "none";
+    x.style.display = "block";
+
+});
+
+
+
+x.addEventListener("click", () => {
+    navMenu.style.display = "none";
+    hamburger.style.display = "block";
+    x.style.display = "none";
+});
+
+
+
+
+
+
+
