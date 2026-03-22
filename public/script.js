@@ -11,7 +11,6 @@ smartphoneLink.addEventListener("mouseleave", () => {
 
 
 
-
 // Hamburger menu
 
 const hamburger = document.querySelector(".bars");
@@ -35,10 +34,6 @@ function checkScreenSize() {
     }
 }
 window.addEventListener("resize", checkScreenSize);
-
-
-
-
 
 
 
