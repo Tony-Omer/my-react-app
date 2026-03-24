@@ -222,7 +222,6 @@ body {
 .smartphones {
     width: 800px;
     height: 500px;
-    background-color: #006fe5;
     border-radius: 5px;
     background-color: rgb(0, 85, 188);
     position: absolute;
@@ -407,7 +406,6 @@ body {
 }
 
 
-
 @media (max-width: 820px){
 
     .top-nav h1{
@@ -438,8 +436,6 @@ body {
 
 
 }
-
-
 
 
 @media (max-width: 768px){
@@ -511,8 +507,6 @@ body {
     }
 
 
-
-
 /* Styling X Mark */
 .x{
     position: absolute;
@@ -538,5 +532,97 @@ body {
         margin-left: 0;
     }
 }
+
+
+
+
+
+
+
+
+.container{
+    width: 800px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    background-color: rgb(0, 85, 188);
+    border-radius: 5px;
+    position: absolute;
+    z-index: 2;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%);
+    overflow-x: hidden;
+    box-shadow: 2px 2px 4px black;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+
+    
+}
+
+
+
+.container .first-laptop-box, .container .second-laptop-box{
+    width: 280px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    
+}
+
+
+
+
+/*First and Second Laptop Box Styling*/
+.container .first-laptop-box .slider, .container .second-laptop-box .slider{
+    width: calc(280px * 8);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 5px;
+    animation: slideToRight 10s linear infinite;
+    
+}
+
+
+
+
+@keyframes slideToRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+
+.container .first-laptop-box .laptop-img, .container .second-laptop-box .laptop-img{
+    width: 280px;
+    height: 400px;
+    object-fit: cover;
+    flex-shrink: 0; 
+    border-radius: 5px;
+    
+    
+}
+
+
+
+
+
+
+
+
+
 
 
