@@ -1,69 +1,21 @@
-// ================= SMARTPHONES DROPDOWN =================
-const smartphones = document.querySelector(".smartphones");
-const smartphoneLink = document.querySelector(".phones");
+const slider = document.querySelector(".slider");
+const totalOriginalSlides = 4; // Phones, Laptops, Earphones, Headphones
+let index = 0;
 
-smartphoneLink.addEventListener("mouseenter", () => {
-    smartphones.style.opacity = "1";
-    smartphones.style.pointerEvents = "auto";
-});
+setInterval(function () {
+    index++;
 
-smartphoneLink.addEventListener("mouseleave", () => {
-    smartphones.style.opacity = "0";
-    smartphones.style.pointerEvents = "none";
-});
+    // 1. Start the smooth transition to the next slide
+    slider.style.transition = "transform 0.6s ease-in-out";
+    slider.style.transform = `translateX(-${index * 100}vw)`;
 
-
-// ================= HAMBURGER MENU =================
-const hamburger = document.querySelector(".bars");
-const navMenu = document.querySelector(".top-nav");
-const x = document.querySelector(".top-nav .x");
-
-hamburger.addEventListener("click", () => {
-    navMenu.style.display = "flex";
-    hamburger.style.display = "none";
-    x.style.display = "block";
-});
-
-x.addEventListener("click", () => {
-    navMenu.style.display = "none";
-    hamburger.style.display = "block";
-    x.style.display = "none";
-});
-
-
-// ================= SCREEN RESIZE FIX =================
-function checkScreenSize() {
-    if (window.innerWidth > 768) {
-        navMenu.style.display = "flex";
-        hamburger.style.display = "none";
-        x.style.display = "none"; // ❗ fixed (should not show X on desktop)
-    } else {
-        navMenu.style.display = "none";
-        hamburger.style.display = "block";
-        x.style.display = "none";
+    // 2. Check if we just moved to the CLONED slide (index 4)
+    if (index === totalOriginalSlides) {
+        
+        setTimeout(function () {
+            slider.style.transition = "none"; 
+            slider.style.transform = "translateX(0)"; 
+            index = 0; 
+        }, 600); 
     }
-}
-
-window.addEventListener("resize", checkScreenSize);
-
-// run once on load
-checkScreenSize();
-
-
-//  LAPTOP DROPDOWN 
-const container = document.querySelector(".container");
-const laptopsLink = document.querySelector(".laptops");
-
-laptopsLink.addEventListener("mouseenter", () => {
-    container.style.opacity = "1";
-    container.style.pointerEvents = "auto";
-});
-
-laptopsLink.addEventListener("mouseleave", () => {
-    container.style.opacity = "0";
-    container.style.pointerEvents = "none";
-});
-
-
-
-
+}, 3000); 
