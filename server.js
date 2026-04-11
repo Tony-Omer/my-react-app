@@ -189,6 +189,24 @@ passport.deserializeUser((id, done) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // Handle registration POST request
 
   app.post("/register", async (req, res) => {
