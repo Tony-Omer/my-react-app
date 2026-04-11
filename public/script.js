@@ -1,5 +1,5 @@
 
-const shoppingButtons = document.querySelectorAll(".shopping-button");
+const shoppingButtons = document.querySelectorAll(".shoppingBtn");
 
 const slider = document.querySelector(".slider");
 const totalOriginalSlides = 4;

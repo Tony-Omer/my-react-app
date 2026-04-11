@@ -335,18 +335,45 @@ body {
 
 .items .slider .box a .shoppingBtn {
     position: absolute;
-    bottom: 110px;
-    left: 110px;
+    width: 170px;
+    height: 50px;
+    font-size: 18px;
+    bottom: 120px;
+    left: 7%;
     padding: 10px 20px;
     background-color: rgba(255, 255, 255, 0.8);
-    background: transparent;
+    border: none;
     color: black;
     text-decoration: none;
     font-weight: bold;
     border-radius: 10px;
+    font-style: italic;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
+.items .slider .box a .shoppingBtn:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+    transition: background-color 0.3s ease;
+}
+
+
+.items .slider .box a .shoppingBtn.black {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.items .slider .box a .orange {
+    background-color:  rgb(255, 119, 0);
+    border: none;
+}
+
+.items .slider .box a .orange:hover {
+    background-color:  rgb(255, 119, 0);
+    border: none;
+    transform: scale(1.1);
+    transition: background-color 0.3s ease;
+}
 
 
