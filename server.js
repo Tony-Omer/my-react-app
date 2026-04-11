@@ -286,26 +286,6 @@ passport.deserializeUser((id, done) => {
 
 
 
-        
-      
-
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -340,7 +320,9 @@ app.get("/logout", (req, res) => {
 
 
 
-
+app.get("/smartphones", (req, res) => {
+    res.render("smartphones");
+});
 
 
 
