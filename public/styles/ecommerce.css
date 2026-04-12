@@ -273,7 +273,6 @@ body {
     height: 100vh;
     display: flex; /* Added this to help center the slider if needed */
     align-items: center;
-    border: 1px solid black;
     overflow: hidden;
     position: relative;
 }
