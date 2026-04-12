@@ -57,13 +57,108 @@ body{
 
 
 
+
+
+
+
 .products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    margin-top: 20px;
+   width: 100%;
+    max-width: 1200px; /* Prevents the grid from getting too wide on huge monitors */
+    margin: 60px auto; /* Centers the container */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px;
+
 }
 
 
+.products .product-card {
+    background: #fff;
+    border: 1px solid #ddd; /* Lightened the border for a cleaner look */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* Ensures image corners match card corners */
+    margin-left: 20px;
+    margin-right: 20px;
+
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+    
+}
+
+.products .product-card:hover {
+    transform: translateY(-5px); /* Subtle lift effect */
+}
+
+
+
+
+.products .product-card .image {
+    width: 100%;
+    height: 300px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+
+.products .product-card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Keeps the phone aspect ratio perfect */
+}
+
+.products .product-card .image img:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+    
+}
+
+
+
+/* Details Section */
+.details {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* Button Styling */
+.addToCart {
+    background-color: #0071e3; /* Apple-style blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.addToCart:hover {
+    background-color: #015fbd;
+    transform: scale(1.05);
+}
