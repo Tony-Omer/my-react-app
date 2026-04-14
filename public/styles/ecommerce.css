@@ -138,12 +138,16 @@ body {
         margin: 0;
         padding: 20px 0;
         background-color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background: transparent;
         
     }
     
 
     .items {
-        top: 400px;
         width: 100%;
         position: relative;
     }
@@ -172,9 +176,37 @@ body {
         flex-direction: column;
         gap: 30px;
         padding: 15px;
+        width: 50%;
+    }
+
+
+    .top-nav nav ul li {
+        width: 100%;
+        padding: 10px;
+        border-radius: 20px;
+        background: rgba(0, 0, 0, 0.8);
+    }
+    .top-nav nav ul li:hover {
+        background: rgba(0, 0, 0, 1);
+    }
+
+
+
+    .top-nav nav ul li a{
+        width: 100%;
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        font-style: italic;
+        display: inline-block; /* important */
+        transition: transform 0.3s ease;
     }
 
     
+    .items .shoppingBtn {
+        display: none;
+    }
 
 
 }
