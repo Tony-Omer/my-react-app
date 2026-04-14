@@ -332,6 +332,12 @@ app.get("/laptops", (req, res) => {
 });
 
 
+//Render earphones page
+app.get("/earphones", (req, res) => {
+    res.render("earphones");
+});
+
+
 
 
 
