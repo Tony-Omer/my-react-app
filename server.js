@@ -319,9 +319,16 @@ app.get("/logout", (req, res) => {
 
 
 
-
+// Render smartphones page
 app.get("/smartphones", (req, res) => {
     res.render("smartphones");
+});
+
+
+
+// Render laptops page
+app.get("/laptops", (req, res) => {
+    res.render("laptops");
 });
 
 
