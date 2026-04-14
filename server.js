@@ -320,23 +320,28 @@ app.get("/logout", (req, res) => {
 
 
 // Render smartphones page
-app.get("/smartphones", (req, res) => {
+app.get("/smartphones", ensureAuth, (req, res) => {
     res.render("smartphones");
 });
 
 
 
 // Render laptops page
-app.get("/laptops", (req, res) => {
+app.get("/laptops", ensureAuth, (req, res) => {
     res.render("laptops");
 });
 
 
 //Render earphones page
-app.get("/earphones", (req, res) => {
+app.get("/earphones", ensureAuth, (req, res) => {
     res.render("earphones");
 });
 
+
+// Render headphones page
+app.get("/headphones", ensureAuth, (req, res) => {
+    res.render("headphones");
+});
 
 
 
